@@ -24,14 +24,14 @@ public class HeapSort {
         }
     }
     // 构建大根堆:　从下往上
-    public static void HeapInsert(int[] arr, int left) {
+    public static void HeapInsert(int[] arr, int index) {
         // 找到当前index位置的父节点的位置
-        while(left > 0) {
-            int parent = (left-1) / 2;
-            if(arr[left]>arr[parent]) {
+        while(index > 0) {
+            int parent = (index-1) / 2;
+            if(arr[index]>arr[parent]) {
                 // 如果当前要插入的值比其父节点的值大　则应与其父节点交换
-                swap(arr, parent, left);
-                left = parent;  // 注意：这里是一个循环赋值　即不断往上找父节点　父节点的父节点　直到找到第一个比value大的父时停止与父的交换
+                swap(arr, parent, index);
+                index = parent;  // 注意：这里是一个循环赋值　即不断往上找父节点　父节点的父节点　直到找到第一个比value大的父时停止与父的交换
             } else {
                 break;
             }
@@ -45,32 +45,37 @@ public class HeapSort {
     }
 
     // 调整堆: 从上往下　把arr的start-end重新调整成大根堆
-    public static void Heapify(int[] arr, int start, int end) {
-        int left = 2*start + 1;
-        int right = 2*start + 2;
-        int largest = start;
-        while(left < end) {
+    public static void Heapify(int[] arr, int index, int heapSize) {
+        int left = 2*index + 1;
+        int right = 2*index + 2;
+        int largest = index;
+        while(left < heapSize) {
             if(arr[left] > arr[largest]) {
                 largest = left;
             }
-            if(right < end && arr[right] > arr[largest]) {
+            if(right < heapSize && arr[right] > arr[largest]) {
                 largest = right;
             }
-            if(largest != start) {
-                swap(arr, start, largest);
+            if(largest != index) {
+                swap(arr, index, largest);
             } else {
                 break; // break的前提是largest已经比左右孩子都大了　再也没有更大的数能往上滚了
             }
 
-            start = largest;
+            index = largest;
             left = 2*largest + 1;
             right = 2*largest + 2;
         }
     }
 
+    public static void findKthNum(int[] arr) {
+
+    }
+
     public static void main(String[] args) {
         int[] arr = {38, 65, 97, 76, 13, 27, 49};
-        HeapSort1(arr);
+        // 堆排序
+         HeapSort1(arr);
         for(int i=0; i<arr.length; i++) {
             System.out.print(arr[i]+" ");
         }
