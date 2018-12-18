@@ -3,6 +3,8 @@ package Sort;
 /**
  * Created by yetmare on 18-12-9.
  * 归并排序：思想是分治　通过递归不断二分　再将二者排序合并
+ * 可以做到稳定：　merge过程中　遇到相同的数先拷贝左边的即可
+ * 额外空间复杂的O(N)
  */
 public class MergeSort {
     public static int[] MergeSort1(int[] arr, int start, int end) {

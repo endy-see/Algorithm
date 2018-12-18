@@ -4,7 +4,12 @@ package Sort;
  * Created by yetmare on 18-12-10.
  * 快速排序
  * 经典快速排序：选定数组最后一个数　然后将比它小的数放在它的右边　将比它大的数放在它的左边
- * 快速排序：随机选定锚点数　然后将比锚点数小的数放在锚点左边　将比锚点数大的数放在锚点的右边
+ * 快速排序：随机选定锚点数　然后将比锚点数public static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+    }小的数放在锚点左边　将比锚点数大的数放在锚点的右边
+ * 不稳定：因为partition过程做不到稳定性 4 4 4 3
  */
 public class QuickSort {
     // 经典快排：方式一

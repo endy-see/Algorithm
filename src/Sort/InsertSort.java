@@ -4,6 +4,7 @@ package Sort;
  * Created by yetmare on 18-12-8.
  * 插入排序：假定从前往后是有序的，从前面已排好序的数组中找到第一个小于等于当前元素值的位置，
  * 然后将该位置后的所有元素右移一位（腾出一个空位），最后将当前元素插入到腾出的空位上即可
+ * 可以做到稳定
  */
 public class InsertSort {
     public static void InsertSort1(int[] arr) {

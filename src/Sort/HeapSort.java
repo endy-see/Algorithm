@@ -4,6 +4,7 @@ package Sort;
  * Created by yetmare on 18-12-11.
  * 堆排序：　主要包括两个步骤：１. 构建堆　２. 交换堆顶元素与数组的最后一个元素
  * 所以　这里是大根堆　数组排序是从小到大排序
+ * 不稳定：ex : ４　４　４　５　５
  */
 public class HeapSort {
     public static void HeapSort1(int[] arr) {
