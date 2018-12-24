@@ -97,7 +97,7 @@ public class o3_MedianQuick {
 
     public static int[] generateRandomArray(int maxCount, int maxValue) {
         // 随机产生[1,maxCount]之间个[0, maxValue)之间的数
-        // 注: Math.random()返回的是double类型
+        // 注: Math.rand()返回的是double类型
         int[] randomArray = new int[(int)(Math.random()*maxCount) + 1];
         for(int i=0; i<randomArray.length; i++) {
             randomArray[i] = (int)Math.random()*maxValue;
