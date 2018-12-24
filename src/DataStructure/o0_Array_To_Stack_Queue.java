@@ -4,7 +4,7 @@ import java.security.InvalidParameterException;
 
 /**
  * Created by yetmare on 18-12-18.
- * 用数组实现大小固定的栈和队列
+ * 用数组结构实现大小固定的栈和队列
  */
 public class o0_Array_To_Stack_Queue {
     public static class ArrayStack {
