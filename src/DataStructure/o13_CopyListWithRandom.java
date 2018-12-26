@@ -6,11 +6,11 @@ import java.util.HashMap;
  * Created by yetmare on 18-12-24.
  * 复制含有随机指针节点的链表
  * 题目：一种特殊的链表节点描述如下：
- * public class Node {
+ * public class TreeNode {
  * public int value;
- * public Node next;
- * public Node rand;
- * public Node(int data) { this.value = data; }}
+ * public TreeNode next;
+ * public TreeNode rand;
+ * public TreeNode(int data) { this.value = data; }}
  * Node类中的value是节点值，next指针和正常单链表中next指针意义一样，都指向下一个节点，也可能指向null
  * 给定一个由Node节点类型组成的无环单链表的头节点head,请实现一个函数完成这个链表中所有结构的复制，并返回复制的新链表的头节点。
  *
